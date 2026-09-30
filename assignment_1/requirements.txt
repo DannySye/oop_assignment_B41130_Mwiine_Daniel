@@ -1,0 +1,13 @@
+# Core numerical and scientific libraries
+numpy>=1.26.0
+scipy>=1.12.0
+matplotlib>=3.8.0
+
+# Testing framework
+pytest>=8.0.0
+
+# Interactive notebooks and execution
+jupyter>=1.0.0
+nbformat>=5.9.0
+nbclient>=0.10.0
+ipykernel>=6.29.0
