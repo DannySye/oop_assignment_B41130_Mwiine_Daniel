@@ -1,8 +1,18 @@
 [tool.pytest.ini_options]
 minversion = "7.0"
-testpaths = ["assignment_1/tests"]
+testpaths = [
+    "assignment_1/tests",
+    "assignment_2/tests",
+    "assignment_3/tests",
+    "assignment_4/tests",
+    "assignment_5/tests"
+]
 pythonpath = [
     "assignment_1/src",
+    "assignment_2/src",
+    "assignment_3/src",
+    "assignment_4/src",
+    "assignment_5/src",
     "."
 ]
 addopts = "-ra -q --import-mode=importlib"
