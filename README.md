@@ -5,7 +5,7 @@
 **Programme:** MSCS & MSDS  
 **Course:** Object-Oriented Programming with Python  
 **Term:** Advent 2026  
-**Institution:** Uganda Christian University / Makerere University  
+**Institution:** Uganda Christian University  
 
 ---
 
