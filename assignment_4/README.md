@@ -98,3 +98,4 @@ See [README.md](../README.md#ai-use-disclosure) for the full disclosure. For thi
 - Format the heatmap suitability chart with proper color mapping and category labels.
 - Cross-check my cosine similarity implementation formula before I validated it against scipy.
 
+

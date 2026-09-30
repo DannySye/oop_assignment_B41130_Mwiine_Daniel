@@ -44,7 +44,6 @@ assignment_1/
 │   └── test_population.py        # Comprehensive test suite (23 unit & integration tests)
 ├── notebooks/
 │   ├── project1_population.ipynb       # Fully executed Jupyter Notebook
-│   ├── build_notebook.py               # Script to rebuild/re-execute notebook headlessly
 │   └── district_population_forecasts.png # 300 DPI multi-panel forecast figure
 └── README.md                           # This file
 ```
@@ -212,12 +211,12 @@ python -m pytest assignment_1/tests/test_population.py -v
 ```
 All **23 unit and integration tests** will execute and pass in $< 0.5$ seconds.
 
-### Rebuilding & Executing the Notebook
-To re-run the notebook top-to-bottom and regenerate all visual outputs:
+### Executing the Notebook
+Open the notebook in Jupyter and run **Restart & Run All**:
 ```bash
-python assignment_1/notebooks/build_notebook.py
+jupyter notebook assignment_1/notebooks/project1_population.ipynb
 ```
-This produces `assignment_1/notebooks/project1_population.ipynb` and `assignment_1/notebooks/district_population_forecasts.png`.
+The notebook executes top-to-bottom without errors and regenerates all figures.
 
 ---
 

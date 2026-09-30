@@ -39,7 +39,6 @@ assignment_2/
 │   └── test_microgrid.py         # 9 comprehensive unit tests
 ├── notebooks/
 │   ├── project2_microgrid.ipynb  # Fully executed Jupyter Notebook
-│   ├── build_notebook.py         # Notebook execution pipeline
 │   └── microgrid_dispatch_costs.png # Dual-axis dispatch & expenditure visualization
 └── README.md
 ```
@@ -112,4 +111,5 @@ See [README.md](../README.md#ai-use-disclosure) for the full disclosure. For thi
 - Set up the `timeit` benchmarking infrastructure.
 - Explain the difference between `scipy.linalg.solve` and `scipy.optimize.nnls` and when each is appropriate.
 - Write the initial draft of the `generate_synthetic_30day_demands` function (which I then modified to add realistic weekly cyclical patterns myself).
+
 

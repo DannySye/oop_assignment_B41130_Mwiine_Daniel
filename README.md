@@ -109,7 +109,7 @@ pytest assignment_3/tests/ -v
 jupyter notebook assignment_1/notebooks/project1_population.ipynb
 ```
 
-Each notebook can be run with **Restart & Run All** from the Jupyter interface and will execute top-to-bottom without errors. Each `notebooks/` folder also contains a `build_notebook.py` script that regenerates and executes the notebook headlessly — this was useful during development.
+Each notebook can be run with **Restart & Run All** from the Jupyter interface and will execute top-to-bottom without errors.
 
 ---
 
@@ -134,7 +134,7 @@ As required by the academic integrity guidelines in the assignment specification
 
 3. **Debugging test failures:** When `pytest` tests failed (e.g., the circular peak detection in Assignment 4 was initially wrong), I pasted the error and the relevant code and asked the AI to explain what was happening. I then understood the fix (tiling the array for wrap-around) and implemented it myself after verifying the reasoning.
 
-4. **Notebook execution infrastructure:** The `build_notebook.py` scripts that programmatically assemble and execute notebooks via `nbclient` were largely AI-scaffolded, since this was a workflow I had not used before.
+4. **Notebook execution infrastructure:** The scripts that programmatically assemble and execute notebooks via `nbclient` were largely AI-scaffolded, since this was a workflow I had not used before.
 
 5. **LaTeX/markdown formatting:** Some of the mathematical notation in the READMEs and notebook markdown cells was AI-assisted (mostly getting LaTeX syntax right for things like the MSY formula and the equilibrium matrix system).
 
