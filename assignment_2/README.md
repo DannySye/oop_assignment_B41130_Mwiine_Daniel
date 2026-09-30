@@ -40,10 +40,11 @@ assignment_2/
 ├── notebooks/
 │   ├── project2_microgrid.ipynb  # Fully executed Jupyter Notebook
 │   ├── build_notebook.py         # Notebook execution pipeline
-│   ├── kasese_30day_demands.csv  # Synthetic operational dataset
 │   └── microgrid_dispatch_costs.png # Dual-axis dispatch & expenditure visualization
 └── README.md
 ```
+
+> **Note on kasese_30day_demands.csv:** The 30-day demand CSV is generated synthetically at notebook runtime using a fixed random seed (`SEED = 42`). This means the notebook is reproducible without needing a committed CSV file.
 
 ---
 
@@ -92,3 +93,22 @@ $$\min_{\mathbf{x} \ge 0} \|A\mathbf{x} - \mathbf{d}\|_2^2$$
 python -m pytest assignment_2/tests/test_microgrid.py -v
 ```
 *Result: 9 passed in 0.86s.*
+
+---
+
+## 6. Findings & Limitations
+
+The linear algebra model provides a clean and computationally efficient solution to the dispatch problem. The well-conditioned coefficient matrix ($\kappa \approx 5.46$) means that small fluctuations in daily demand loads translate to proportionally bounded changes in dispatch volumes — which is reassuring for real-world operational planning.
+
+The NNLS fallback was necessary for roughly 3 out of 30 simulated days where the unconstrained solution violated physical non-negativity. This is an important design lesson: mathematical solutions and physically valid solutions are not always the same thing.
+
+One key limitation is that this model treats the two load equations as static daily averages. In reality, power demand fluctuates hour by hour (peak loads in early morning and evening), and a true dispatch model would need sub-daily time resolution. The cost figures are also based on simplified levelised tariffs — actual solar and battery costs depend on capital amortization, maintenance cycles, and degradation, none of which are modelled here.
+
+---
+
+## 7. AI Disclosure
+
+See [AI_USAGE.md](../AI_USAGE.md) for the full disclosure. For this project specifically, AI helped me:
+- Set up the `timeit` benchmarking infrastructure.
+- Explain the difference between `scipy.linalg.solve` and `scipy.optimize.nnls` and when each is appropriate.
+- Write the initial draft of the `generate_synthetic_30day_demands` function (which I then modified to add realistic weekly cyclical patterns myself).

@@ -43,11 +43,10 @@ assignment_1/
 │   ├── __init__.py
 │   └── test_population.py        # Comprehensive test suite (23 unit & integration tests)
 ├── notebooks/
-│   ├── project1_population.ipynb # Fully executed Jupyter Notebook with interactive outputs
-│   ├── build_notebook.py         # Reproducible notebook generator & execution script
-│   └── district_population_forecasts.png # High-resolution 300 DPI multi-panel visual dashboard
-├── requirements.txt              # Pinned dependencies
-└── README.md                     # Technical report & documentation
+│   ├── project1_population.ipynb       # Fully executed Jupyter Notebook
+│   ├── build_notebook.py               # Script to rebuild/re-execute notebook headlessly
+│   └── district_population_forecasts.png # 300 DPI multi-panel forecast figure
+└── README.md                           # This file
 ```
 
 ---
@@ -224,6 +223,11 @@ This produces `assignment_1/notebooks/project1_population.ipynb` and `assignment
 
 ## 10. AI Coding Assistant Usage Disclosure
 
-- **Tool Utilized:** Google Gemini 3.8 Flash via Antigravity IDE.
-- **Scope of Use:** Boilerplate scaffolding for pytest fixtures, matplotlib styling templates, and initial Markdown drafting.
-- **Verification:** All numerical formulas, degrees-of-freedom variance proofs, backtesting loops, and bootstrap resampling algorithms were authored, validated against analytical benchmarks, and verified independently.
+See [AI_USAGE.md](../AI_USAGE.md) in the repository root for a full account of how AI assistance was used across all five projects.
+
+For this specific project, AI was used to:
+- Scaffold the initial `DistrictPopulation` class structure and suggest appropriate dunder methods.
+- Help debug a dimension-mismatch error in the bootstrap resampling loop.
+- Suggest matplotlib styling for the multi-panel forecast figure.
+
+All mathematical formulations (ddof variance proofs, CAGR derivation, bootstrap algorithm), the backtesting engine design, and the infrastructure planning logic were developed and verified by me independently.

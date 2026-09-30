@@ -1,9 +1,11 @@
-# Mini-Project 5: Taxi Route Revenue, Pricing & Fleet Planner
+# Assignment 5: Taxi Route Revenue, Pricing & Fleet Planner
 
-**Course:** Advanced Object-Oriented Programming & Data Science  
-**Student Name:** Mwiine Daniel  
-**Registration Number:** B41130  
-**Corpus / Repository:** `DannySye/oop_assignment_B41130_Mwiine_Daniel`
+**Course:** MSCS & MSDS – Object-Oriented Programming with Python  
+**Term:** Advent 2026  
+**Author:** Daniel Mwiine  
+**Student ID:** B41130  
+**Registration Number:** S26M25/001  
+**Module:** Mini-Project 5 (`assignment_5`)
 
 ---
 
@@ -127,23 +129,34 @@ Quantitative analysis of the Kampala minibus taxi corridors delivers four fundam
 ---
 
 ## 5. Visual Artifacts
-- `assignment_5/transport_forecasts.png`: 3-panel comparative forecast plot (Ntinda, Entebbe, Mukono actuals vs Day 11 forecasts).
-- `assignment_5/seasonal_transport_benchmark.png`: 60-day time series trajectory illustrating the superiority of Seasonal-Naive forecasting over Moving Average smoothing.
+- `notebooks/transport_forecasts.png`: 3-panel comparative forecast plot (Ntinda, Entebbe, Mukono actuals vs Day 11 forecasts).
+- `notebooks/seasonal_transport_benchmark.png`: 60-day time series showing Seasonal-Naive outperforming Moving Average on periodic transit data.
 
 ---
 
 ## 6. How to Run & Verify
 
 ### Run Pytest Suite
-```powershell
+```bash
 python -m pytest assignment_5/tests/test_transport.py -v
 ```
 
 ### Execute Jupyter Notebook
-```powershell
-jupyter nbconvert --to notebook --execute assignment_5/notebooks/project5_transport.ipynb
+```bash
+jupyter notebook assignment_5/notebooks/project5_transport.ipynb
 ```
-Or execute the automated builder script:
-```powershell
+Or rebuild and execute headlessly:
+```bash
 python assignment_5/notebooks/build_notebook.py
 ```
+
+---
+
+## 7. AI Disclosure
+
+See [AI_USAGE.md](../AI_USAGE.md) for the full disclosure. For this project, AI was used to:
+- Help me set up the `walk_forward_backtest` function — specifically, I wasn't sure how to handle the rolling origin window correctly without data leakage, and AI explained the approach clearly.
+- Scaffold the `grid_search_optimal_ses_alpha` grid search loop.
+- Draft the `nbclient` notebook execution boilerplate in `build_notebook.py`.
+
+The market equilibrium setup (expressing $Q_d - Q_s = 0$ as a $2 \times 2$ linear system) and the fleet sizing formula with integer ceiling rounding were worked out by me from the spec and verified analytically.

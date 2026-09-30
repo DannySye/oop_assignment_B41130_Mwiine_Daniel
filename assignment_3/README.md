@@ -76,3 +76,22 @@ properly enforces the environmental carrying capacity $K = 10{,}000$ tonnes.
 python -m pytest assignment_3/tests/test_fisheries.py -v
 ```
 *Result: 9 passed in 0.24s.*
+
+---
+
+## 5. Findings & Limitations
+
+The key finding from this project is that the choice of harvest rate has a massive effect on long-term fishery viability. Running the Schaefer model across four harvest regimes confirmed that  = 0.20$ sits right at the theoretical Maximum Sustainable Yield — extracting the most per year without depleting the stock. The overfishing scenario ( = 0.30$) is particularly sobering: even though short-term revenues look similar to MSY, the biomass trajectory tells a different story — it drops to less than 3,000 tonnes, putting the fishery at real risk of collapse within a decade.
+
+The seasonal moratorium extension was interesting to implement. Prohibiting fishing during weeks 18–25 (peak breeding season) gives the stock meaningful recovery time. The 5-year simulation showed a 21% increase in terminal biomass compared to continuous fishing, which in practice translates to higher sustainable catches in future years.
+
+Limitations to acknowledge: the Schaefer model is a single-species, single-area model. Lake Victoria supports multiple interacting species (Nile Perch, Tilapia, Dagaa) with complex predator-prey dynamics that a simple logistic equation cannot capture. The stochastic price model also uses a symmetric random walk, whereas real export prices are influenced by demand in EU markets, USD exchange rates, and quality certification costs — none of which are modelled here.
+
+---
+
+## 6. AI Disclosure
+
+See [AI_USAGE.md](../AI_USAGE.md) for the full disclosure. For this project, AI assistance was used to:
+- Help me understand the difference between the Schaefer model and more complex age-structured fisheries models.
+- Review my Monte Carlo simulation loop for off-by-one errors in the VaR percentile calculation.
+- Suggest the histogram formatting for the VaR visualization.

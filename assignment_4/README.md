@@ -78,3 +78,22 @@ assignment_4/
 python -m pytest assignment_4/tests/test_climate.py -v
 ```
 *Result: 8 passed in 1.42s.*
+
+---
+
+## 5. Findings & Limitations
+
+The most interesting challenge in this project was the circular peak detection problem. Standard scipy.signal.find_peaks treats the 12-month array as a linear sequence — so if rainfall is rising in December heading into January, the December peak gets missed because the algorithm doesn't see a decline on its right side. My fix was to tile the array three times and detect peaks in the middle copy, then map detected peaks back to the original months. After testing this against all three regions, the results matched Uganda's recognized climatological zones from UNMA records, which I took as a meaningful validation.
+
+The cosine similarity vs Euclidean distance comparison was also illuminating. Kampala and Mbarara look very similar under cosine similarity ( = 0.942$) because their rainfall *patterns* (shape over the year) are proportionally alike, but Kampala receives about 54% more total rainfall. This matters practically: a farmer using only pattern similarity to plan might apply Kampala planting calendars in Mbarara, but underestimate the need for drought-tolerant varieties during Mbarara's more severe dry spells.
+
+Key limitations: all rainfall data used is illustrative (from the spec), not real station data. Real UNMA or CHIRPS data would likely show more inter-annual variability than the synthetic 10-year records I generated for the extension task. The crop suitability rules are also simplified monthly thresholds — actual agronomy accounts for soil type, temperature, humidity, and cumulative growing degree days.
+
+---
+
+## 6. AI Disclosure
+
+See [AI_USAGE.md](../AI_USAGE.md) for the full disclosure. For this project, AI helped me:
+- Explain why scipy.signal.find_peaks misses circular boundary peaks and suggest the array tiling approach.
+- Format the heatmap suitability chart with proper color mapping and category labels.
+- Cross-check my cosine similarity implementation formula before I validated it against scipy.
