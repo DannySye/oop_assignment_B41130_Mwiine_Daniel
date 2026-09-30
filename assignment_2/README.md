@@ -108,7 +108,8 @@ One key limitation is that this model treats the two load equations as static da
 
 ## 7. AI Disclosure
 
-See [AI_USAGE.md](../AI_USAGE.md) for the full disclosure. For this project specifically, AI helped me:
+See [README.md](../README.md#ai-use-disclosure) for the full disclosure. For this project specifically, AI helped me:
 - Set up the `timeit` benchmarking infrastructure.
 - Explain the difference between `scipy.linalg.solve` and `scipy.optimize.nnls` and when each is appropriate.
 - Write the initial draft of the `generate_synthetic_30day_demands` function (which I then modified to add realistic weekly cyclical patterns myself).
+

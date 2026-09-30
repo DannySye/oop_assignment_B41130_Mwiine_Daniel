@@ -93,7 +93,8 @@ Key limitations: all rainfall data used is illustrative (from the spec), not rea
 
 ## 6. AI Disclosure
 
-See [AI_USAGE.md](../AI_USAGE.md) for the full disclosure. For this project, AI helped me:
+See [README.md](../README.md#ai-use-disclosure) for the full disclosure. For this project, AI helped me:
 - Explain why scipy.signal.find_peaks misses circular boundary peaks and suggest the array tiling approach.
 - Format the heatmap suitability chart with proper color mapping and category labels.
 - Cross-check my cosine similarity implementation formula before I validated it against scipy.
+

@@ -91,7 +91,8 @@ Limitations to acknowledge: the Schaefer model is a single-species, single-area 
 
 ## 6. AI Disclosure
 
-See [AI_USAGE.md](../AI_USAGE.md) for the full disclosure. For this project, AI assistance was used to:
+See [README.md](../README.md#ai-use-disclosure) for the full disclosure. For this project, AI assistance was used to:
 - Help me understand the difference between the Schaefer model and more complex age-structured fisheries models.
 - Review my Monte Carlo simulation loop for off-by-one errors in the VaR percentile calculation.
 - Suggest the histogram formatting for the VaR visualization.
+

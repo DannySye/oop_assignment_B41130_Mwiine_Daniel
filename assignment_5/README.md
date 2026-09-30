@@ -154,9 +154,10 @@ python assignment_5/notebooks/build_notebook.py
 
 ## 7. AI Disclosure
 
-See [AI_USAGE.md](../AI_USAGE.md) for the full disclosure. For this project, AI was used to:
+See [README.md](../README.md#ai-use-disclosure) for the full disclosure. For this project, AI was used to:
 - Help me set up the `walk_forward_backtest` function — specifically, I wasn't sure how to handle the rolling origin window correctly without data leakage, and AI explained the approach clearly.
 - Scaffold the `grid_search_optimal_ses_alpha` grid search loop.
 - Draft the `nbclient` notebook execution boilerplate in `build_notebook.py`.
 
 The market equilibrium setup (expressing $Q_d - Q_s = 0$ as a $2 \times 2$ linear system) and the fleet sizing formula with integer ceiling rounding were worked out by me from the spec and verified analytically.
+

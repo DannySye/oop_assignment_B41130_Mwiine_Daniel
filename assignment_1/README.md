@@ -223,7 +223,7 @@ This produces `assignment_1/notebooks/project1_population.ipynb` and `assignment
 
 ## 10. AI Coding Assistant Usage Disclosure
 
-See [AI_USAGE.md](../AI_USAGE.md) in the repository root for a full account of how AI assistance was used across all five projects.
+See [README.md](../README.md#ai-use-disclosure) in the repository root for a full account of how AI assistance was used across all five projects.
 
 For this specific project, AI was used to:
 - Scaffold the initial `DistrictPopulation` class structure and suggest appropriate dunder methods.
@@ -231,3 +231,4 @@ For this specific project, AI was used to:
 - Suggest matplotlib styling for the multi-panel forecast figure.
 
 All mathematical formulations (ddof variance proofs, CAGR derivation, bootstrap algorithm), the backtesting engine design, and the infrastructure planning logic were developed and verified by me independently.
+
